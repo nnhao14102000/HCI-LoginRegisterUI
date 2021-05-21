@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ModernLogin</string>
+    <string name="login_mobile_number_hint">Mobile number</string>
+    <string name="login_password_hint">Password</string>
+</resources>
