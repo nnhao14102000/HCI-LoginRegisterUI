@@ -77,7 +77,7 @@ public class BookingActivity extends AppCompatActivity {
                 check.setEnabled(true);
                 if (check.isChecked()) {
                     check.setBackground(getApplicationContext().getDrawable(R.drawable.border_checked));
-                    check.setTextColor(getApplicationContext().getColor(R.color.colorAccent));
+                    check.setTextColor(getApplicationContext().getColor(R.color.cyan_color));
                 } else {
                     check.setBackground(getApplicationContext().getDrawable(R.drawable.border_unchecked));
                     check.setTextColor(getApplicationContext().getColor(R.color.default_text));
@@ -139,7 +139,7 @@ public class BookingActivity extends AppCompatActivity {
     }
     private void setSelectedStylist() {
         linearCommon.setBackground(getApplicationContext().getDrawable(R.drawable.border_checked));
-        txtCommon.setTextColor(getApplicationContext().getColor(R.color.colorAccent));
+        txtCommon.setTextColor(getApplicationContext().getColor(R.color.cyan_color));
     }
 
     private void resetStylist() {

@@ -38,15 +38,6 @@ public class SalonViewActivity extends AppCompatActivity {
 
     }
 
-    public void onLeftStylistClick(View view) {
-    }
-
-    public void onCenterStylistClick(View view) {
-    }
-
-    public void onRightStylistClick(View view) {
-    }
-
     public void onBackToHomeClick(View view) {
         startActivity(new Intent(this,HomeActivity.class));
         overridePendingTransition(R.anim.slide_in_left,R.anim.stay);
@@ -54,6 +45,16 @@ public class SalonViewActivity extends AppCompatActivity {
 
     public void onBookClick(View view) {
         startActivity(new Intent(this,BookingActivity.class));
+        overridePendingTransition(R.anim.slide_in_bottom,R.anim.stay);
+    }
+
+    public void onBtnDiscountClick(View view) {
+
+        overridePendingTransition(R.anim.slide_in_bottom,R.anim.stay);
+    }
+
+    public void onBtnReviewClick(View view) {
+
         overridePendingTransition(R.anim.slide_in_bottom,R.anim.stay);
     }
 }
