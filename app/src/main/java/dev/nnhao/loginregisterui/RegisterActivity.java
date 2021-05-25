@@ -18,7 +18,7 @@ public class RegisterActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= 30) {
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(getResources().getColor(R.color.cyan_color));
+            window.setStatusBarColor(getResources().getColor(R.color.red_color));
         }
     }
 

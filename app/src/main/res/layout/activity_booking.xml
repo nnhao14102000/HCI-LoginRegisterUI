@@ -27,14 +27,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:background="@color/cyan_color"
+            android:background="@color/red_color"
             android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/arrow_left_white" />
+                android:src="@drawable/left_arrow" />
 
             <TextView
                 android:id="@+id/txtMonthYear"
@@ -49,14 +49,14 @@
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/arrow_right_white" />
+                android:src="@drawable/right_arrow" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
-            android:background="@color/cyan_color"
+            android:background="@color/red_color"
             android:orientation="horizontal"
             android:padding="5dp">
 
@@ -147,14 +147,14 @@
             android:padding="10dp">
 
             <ImageView
-                android:layout_width="40dp"
+                android:layout_width="30dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="5dp"
                 android:src="@drawable/stylist_left_disable" />
 
             <LinearLayout
                 android:id="@+id/stylistLeft"
-                android:layout_width="90dp"
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:onClick="onLeftStylistClick"
@@ -217,7 +217,7 @@
 
             <LinearLayout
                 android:id="@+id/stylistRight"
-                android:layout_width="90dp"
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:onClick="onRightStylistClick"
@@ -246,7 +246,7 @@
             </LinearLayout>
 
             <ImageView
-                android:layout_width="40dp"
+                android:layout_width="30dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:src="@drawable/stylist_right_active" />
