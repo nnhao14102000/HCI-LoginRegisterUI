@@ -31,7 +31,7 @@
                     style="@style/viewParent.headerText.NoMode"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    android:text="Already \nhave an \nAccount?" />
+                    android:text="Salon\nApp"/>
 
                 <ImageView
                     android:layout_width="240dp"

@@ -29,8 +29,8 @@
                     style="@style/viewParent.headerText.NoMode"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentRight="true"
-                    android:text="Here’s\nyour first\nstep with \nus! "
                     android:gravity="center"
+                    android:text="App\nName"
                     android:textColor="@color/white" />
             </RelativeLayout>
             <androidx.cardview.widget.CardView
@@ -85,7 +85,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/loginViewsMargin"
                         android:onClick="onRegisterClick"
-                        android:text="Login" />
+                        android:text="Register" />
                     <TextView
                         style="@style/parent"
                         android:layout_marginTop="@dimen/loginViewsMargin"

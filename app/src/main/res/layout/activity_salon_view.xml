@@ -45,14 +45,6 @@
                 android:textColor="@color/red_color"
                 android:textSize="24sp" />
 
-            <RatingBar
-                android:id="@+id/ratingSalon"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:numStars="1"
-                android:rating="3.5"
-                android:isIndicator="false"
-                style="@style/ratingStyle"/>
         </LinearLayout>
 
         <ImageView
@@ -67,6 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
+        android:scrollbars="none"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout_title">
@@ -201,283 +194,345 @@
                 android:layout_marginTop="5dp"
                 android:gravity="center|left"
                 android:paddingLeft="20dp"
-                android:text="Our Services"
+                android:text="Look Book"
                 android:textColor="@color/red_color"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="450dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/background_seperator"
-                android:gravity="center"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingBottom="15dp">
+                android:padding="20dp">
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="210dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
-                    <LinearLayout
-                        android:layout_width="110dp"
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="160dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/stylist_left_active"
+                        android:onClick="onPreLook"/>
+
+                    <ImageView
+                        android:id="@+id/imgLookBook"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:padding="4dp"
+                        android:src="@drawable/look_book_1"
+                        android:background="@color/red_color"/>
+
+                    <ImageView
+                        android:layout_width="32dp"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
-                            android:src="@drawable/ic_haircut" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="45dp"
-                            android:fontFamily="monospace"
-                            android:gravity="center|top"
-                            android:paddingTop="5dp"
-                            android:text="Haircut"
-                            android:textColor="@color/red_color" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="serif-monospace"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="#000000"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:fontFamily="serif-monospace"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="#000000"
-                            android:textSize="14sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="110dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
-                            android:src="@drawable/ic_hairwash" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="45dp"
-                            android:fontFamily="monospace"
-                            android:gravity="center|top"
-                            android:paddingTop="5dp"
-                            android:text="Hair Wash"
-                            android:textColor="@color/red_color" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="serif-monospace"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="#000000"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:fontFamily="serif-monospace"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="#000000"
-                            android:textSize="14sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="110dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
-                            android:src="@drawable/ic_straighten" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="45dp"
-                            android:fontFamily="monospace"
-                            android:gravity="center|top"
-                            android:paddingTop="5dp"
-                            android:text="Straightening"
-                            android:textColor="@color/red_color" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="serif-monospace"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="#000000"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:fontFamily="serif-monospace"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="#000000"
-                            android:textSize="14sp" />
-
-                    </LinearLayout>
-
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/stylist_right_active"
+                        android:onClick="onNextLook" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="210dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="110dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
-                            android:src="@drawable/ic_curl" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="45dp"
-                            android:fontFamily="monospace"
-                            android:gravity="center|top"
-                            android:paddingTop="5dp"
-                            android:text="Curling"
-                            android:textColor="@color/red_color" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="serif-monospace"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="#000000"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:fontFamily="serif-monospace"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="#000000"
-                            android:textSize="14sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="110dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
-                            android:src="@drawable/ic_color_m" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="45dp"
-                            android:fontFamily="monospace"
-                            android:gravity="center|top"
-                            android:paddingTop="5dp"
-                            android:text="Coloring\n(Male)"
-                            android:textColor="@color/red_color" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="serif-monospace"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="#000000"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:fontFamily="serif-monospace"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="#000000"
-                            android:textSize="14sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="110dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
-                            android:src="@drawable/ic_color_f" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="45dp"
-                            android:fontFamily="monospace"
-                            android:gravity="center|top"
-                            android:paddingTop="5dp"
-                            android:text="Coloring\n(Female)"
-                            android:textColor="@color/red_color" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="serif-monospace"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="#000000"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:fontFamily="serif-monospace"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="#000000"
-                            android:textSize="14sp" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="right"
+                    android:gravity="center|right"
+                    android:paddingLeft="20dp"
+                    android:text="View more..."
+                    android:textColor="@color/red_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
             </LinearLayout>
+
+<!--            <TextView-->
+<!--                style="@style/parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:gravity="center|left"-->
+<!--                android:paddingLeft="20dp"-->
+<!--                android:text="Our Services"-->
+<!--                android:textColor="@color/red_color"-->
+<!--                android:textSize="17sp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="450dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:background="@drawable/background_seperator"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical"-->
+<!--                android:paddingBottom="15dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="210dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="110dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_margin="5dp"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="90dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:src="@drawable/ic_haircut" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="45dp"-->
+<!--                            android:fontFamily="monospace"-->
+<!--                            android:gravity="center|top"-->
+<!--                            android:paddingTop="5dp"-->
+<!--                            android:text="Haircut"-->
+<!--                            android:textColor="@color/red_color" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:fontFamily="serif-monospace"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="-"-->
+<!--                            android:textColor="#000000"-->
+<!--                            android:textSize="14sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:fontFamily="serif-monospace"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="-"-->
+<!--                            android:textColor="#000000"-->
+<!--                            android:textSize="14sp" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="110dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_margin="5dp"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="90dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:src="@drawable/ic_hairwash" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="45dp"-->
+<!--                            android:fontFamily="monospace"-->
+<!--                            android:gravity="center|top"-->
+<!--                            android:paddingTop="5dp"-->
+<!--                            android:text="Hair Wash"-->
+<!--                            android:textColor="@color/red_color" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:fontFamily="serif-monospace"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="-"-->
+<!--                            android:textColor="#000000"-->
+<!--                            android:textSize="14sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:fontFamily="serif-monospace"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="-"-->
+<!--                            android:textColor="#000000"-->
+<!--                            android:textSize="14sp" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="110dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_margin="5dp"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="90dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:src="@drawable/ic_straighten" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="45dp"-->
+<!--                            android:fontFamily="monospace"-->
+<!--                            android:gravity="center|top"-->
+<!--                            android:paddingTop="5dp"-->
+<!--                            android:text="Straightening"-->
+<!--                            android:textColor="@color/red_color" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:fontFamily="serif-monospace"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="-"-->
+<!--                            android:textColor="#000000"-->
+<!--                            android:textSize="14sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:fontFamily="serif-monospace"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="-"-->
+<!--                            android:textColor="#000000"-->
+<!--                            android:textSize="14sp" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="210dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="110dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_margin="5dp"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="90dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:src="@drawable/ic_curl" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="45dp"-->
+<!--                            android:fontFamily="monospace"-->
+<!--                            android:gravity="center|top"-->
+<!--                            android:paddingTop="5dp"-->
+<!--                            android:text="Curling"-->
+<!--                            android:textColor="@color/red_color" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:fontFamily="serif-monospace"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="-"-->
+<!--                            android:textColor="#000000"-->
+<!--                            android:textSize="14sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:fontFamily="serif-monospace"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="-"-->
+<!--                            android:textColor="#000000"-->
+<!--                            android:textSize="14sp" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="110dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_margin="5dp"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="90dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:src="@drawable/ic_color_m" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="45dp"-->
+<!--                            android:fontFamily="monospace"-->
+<!--                            android:gravity="center|top"-->
+<!--                            android:paddingTop="5dp"-->
+<!--                            android:text="Coloring\n(Male)"-->
+<!--                            android:textColor="@color/red_color" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:fontFamily="serif-monospace"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="-"-->
+<!--                            android:textColor="#000000"-->
+<!--                            android:textSize="14sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:fontFamily="serif-monospace"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="-"-->
+<!--                            android:textColor="#000000"-->
+<!--                            android:textSize="14sp" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="110dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_margin="5dp"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="90dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:src="@drawable/ic_color_f" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="45dp"-->
+<!--                            android:fontFamily="monospace"-->
+<!--                            android:gravity="center|top"-->
+<!--                            android:paddingTop="5dp"-->
+<!--                            android:text="Coloring\n(Female)"-->
+<!--                            android:textColor="@color/red_color" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:fontFamily="serif-monospace"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="-"-->
+<!--                            android:textColor="#000000"-->
+<!--                            android:textSize="14sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:fontFamily="serif-monospace"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="-"-->
+<!--                            android:textColor="#000000"-->
+<!--                            android:textSize="14sp" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
 
             <TextView
                 style="@style/parent"
@@ -630,7 +685,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/txtSalon1"
                 android:layout_width="match_parent"
                 android:layout_height="170dp" />
 
@@ -651,7 +706,7 @@
         app:layout_constraintRight_toRightOf="parent">
 
         <Button
-            android:id="@+id/btnDiscount"
+            android:id="@+id/btnProducts"
             style="@style/loginButton"
             android:layout_width="110dp"
             android:layout_height="match_parent"
@@ -659,9 +714,9 @@
             android:background="@drawable/background_btn_discount"
             android:fontFamily="monospace"
             android:gravity="center"
-            android:text="Offers"
+            android:text="Products"
             android:textSize="16sp"
-            android:onClick="onBtnDiscountClick" />
+            android:onClick="onProductClick"/>
 
         <Button
             android:id="@+id/btnBooking"
@@ -688,7 +743,7 @@
             android:fontFamily="monospace"
             android:gravity="center"
             android:paddingRight="13dp"
-            android:text="Reviews"
+            android:text=""
             android:textSize="16sp"
             android:onClick="onBtnReviewClick" />
     </LinearLayout>

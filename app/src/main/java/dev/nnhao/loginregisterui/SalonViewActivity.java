@@ -9,6 +9,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -20,6 +21,15 @@ public class SalonViewActivity extends AppCompatActivity {
     private TextView txtCommon;
     private LinearLayout linearCommon;
     private List<String> stylistList;
+    private ImageView imageView;
+    private int lookCount;
+    private Integer[] imageIDs = {
+            R.drawable.look_book_1,
+            R.drawable.look_book_2,
+            R.drawable.look_book_3,
+            R.drawable.look_book_4,
+            R.drawable.look_book_5
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +45,9 @@ public class SalonViewActivity extends AppCompatActivity {
         txtCommon.setText(stylistList.get(1));
         txtCommon = (TextView)findViewById(R.id.nameRight);
         txtCommon.setText(stylistList.get(2));
-
+        imageView = (ImageView)findViewById(R.id.imgLookBook);
+        lookCount = 0;
+        imageView.setImageResource(imageIDs[lookCount]);
     }
 
     public void onBackToHomeClick(View view) {
@@ -48,13 +60,24 @@ public class SalonViewActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.slide_in_bottom,R.anim.stay);
     }
 
-    public void onBtnDiscountClick(View view) {
-
+    public void onProductClick(View view) {
+        startActivity(new Intent(this,ProductActivity.class));
         overridePendingTransition(R.anim.slide_in_bottom,R.anim.stay);
     }
 
-    public void onBtnReviewClick(View view) {
+    public void onPreLook(View view) {
+        lookCount--;
+        if (lookCount < 0) {
+            lookCount = (imageIDs.length - 1);
+        }
+        imageView.setImageResource(imageIDs[lookCount]);
+    }
 
-        overridePendingTransition(R.anim.slide_in_bottom,R.anim.stay);
+    public void onNextLook(View view) {
+        lookCount++;
+        if (lookCount == imageIDs.length) {
+            lookCount = 0;
+        }
+        imageView.setImageResource(imageIDs[lookCount]);
     }
 }
